@@ -1,7 +1,3 @@
-# node dev server port
-PORT=3333
-export PORT
-
 # Add Homebrew `/usr/local/bin` and User `~/bin` to the `$PATH`
 PATH=/usr/local/bin:$PATH
 PATH=$HOME/bin:$PATH
@@ -18,9 +14,3 @@ unset file
 # cycle through options on autocomplete
 bind '"\t":menu-complete'
 
-
-### Added by the Heroku Toolbelt
-export PATH="/usr/local/heroku/bin:$PATH"
-
-# Set psql Editor
-export PSQL_EDITOR="subl -w" 
