@@ -1,3 +1,5 @@
+echo "Loading .bash_profile"
+
 # Add Homebrew `/usr/local/bin` and User `~/bin` to the `$PATH`
 PATH=/usr/local/bin:$PATH
 PATH=$HOME/bin:$PATH
@@ -14,3 +16,6 @@ unset file
 # cycle through options on autocomplete
 bind '"\t":menu-complete'
 
+
+export NVM_DIR="/Users/jeff/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
