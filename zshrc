@@ -84,8 +84,13 @@ export PATH="/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/opt/X11/bin:/usr/texb
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
+# node server
+alias serv='http-server .'
+alias htoday='history | grep `date "+%Y-%m-%d"`'
+alias hhour='history | grep `date "+%Y-%m-%d %H"`'
+
 # load stable node
-nvm use stable
+nvm use stable > /dev/null
 
 # choose first option in completion menu
 setopt MENU_COMPLETE
@@ -130,4 +135,4 @@ setopt hist_ignore_space
 
 # autocompletion
 zstyle ':completion:*:descriptions' format '%U%B%d%b%u'
-zstyle ':completion:*:warnings' format '%BSorry, no matches for: %d%b'
+zstyle ':completion:*:warnings' format '%BNothing found%b'
