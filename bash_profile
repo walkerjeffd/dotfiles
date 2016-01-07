@@ -1,9 +1,9 @@
 echo "Loading .bash_profile"
 
 # Add Homebrew `/usr/local/bin` and User `~/bin` to the `$PATH`
-PATH=/usr/local/bin:$PATH
-PATH=$HOME/bin:$PATH
-export PATH
+# PATH=/usr/local/bin:$PATH
+# PATH=$HOME/bin:$PATH
+# export PATH
 
 # Load the shell dotfiles, and then some:
 # * ~/.path can be used to extend `$PATH`.
