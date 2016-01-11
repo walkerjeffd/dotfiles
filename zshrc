@@ -86,11 +86,16 @@ export PATH="/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/opt/X11/bin:/usr/texb
 
 # node server
 alias serv='http-server .'
+
+# history
 alias htoday='history | grep `date "+%Y-%m-%d"`'
 alias hhour='history | grep `date "+%Y-%m-%d %H"`'
 
+# screen
+alias scr='screen -dRR'
+
 # load stable node
-nvm use stable > /dev/null
+type nvm > /dev/null && nvm use stable > /dev/null
 
 # choose first option in completion menu
 setopt MENU_COMPLETE
