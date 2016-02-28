@@ -141,3 +141,7 @@ setopt hist_ignore_space
 # autocompletion
 zstyle ':completion:*:descriptions' format '%U%B%d%b%u'
 zstyle ':completion:*:warnings' format '%BNothing found%b'
+
+# nvm
+export NVM_DIR="/Users/jeff/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
