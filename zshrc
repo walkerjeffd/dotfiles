@@ -1,3 +1,5 @@
+echo Loading .zshrc
+
 # Path to your oh-my-zsh installation.
 export ZSH=$HOME/.oh-my-zsh
 
@@ -94,9 +96,6 @@ alias hhour='history | grep `date "+%Y-%m-%d %H"`'
 # screen
 alias scr='screen -dRR'
 
-# load stable node
-type nvm > /dev/null && nvm use stable > /dev/null
-
 # choose first option in completion menu
 setopt MENU_COMPLETE
 
@@ -108,7 +107,7 @@ $(boot2docker shellinit 2> /dev/null)
 
 # marked 2
 function marked(){
-  if [ $1 ]; then 
+  if [ $1 ]; then
     open -a "Marked 2.App" $1
   else
     open -a "Marked 2.App"
@@ -142,6 +141,10 @@ setopt hist_ignore_space
 zstyle ':completion:*:descriptions' format '%U%B%d%b%u'
 zstyle ':completion:*:warnings' format '%BNothing found%b'
 
-# nvm
-export NVM_DIR="/Users/jeff/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
+# nvm - load in .zprofile
+# export NVM_DIR="$HOME/.nvm"
+# [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"
+type nvm > /dev/null 2>&1 && nvm use default
+
+# postgres
+export PATH=$PATH:/Applications/Postgres.app/Contents/Versions/9.3/bin

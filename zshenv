@@ -1,4 +1,6 @@
-# load nvm and default node version
-export NVM_DIR="/Users/jeff/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"
-type nvm > /dev/null && nvm use stable > /dev/null
+# echo Loading .zshenv
+
+# nvm - load in .zprofile
+# export NVM_DIR="$HOME/.nvm"
+# [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"
+# nvm use stable
