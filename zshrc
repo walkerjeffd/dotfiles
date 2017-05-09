@@ -1,4 +1,4 @@
-echo Loading .zshrc
+# echo Loading .zshrc
 
 # Path to your oh-my-zsh installation.
 export ZSH=$HOME/.oh-my-zsh
@@ -144,7 +144,7 @@ zstyle ':completion:*:warnings' format '%BNothing found%b'
 # nvm (load in .zprofile)
 # export NVM_DIR="$HOME/.nvm"
 # [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"
-type nvm > /dev/null 2>&1 && nvm use default
+type nvm > /dev/null 2>&1 && nvm use default > /dev/null
 
 # postgres
 export PATH=$PATH:/Applications/Postgres.app/Contents/Versions/9.3/bin
