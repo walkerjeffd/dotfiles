@@ -141,10 +141,13 @@ setopt hist_ignore_space
 zstyle ':completion:*:descriptions' format '%U%B%d%b%u'
 zstyle ':completion:*:warnings' format '%BNothing found%b'
 
-# nvm - load in .zprofile
+# nvm (load in .zprofile)
 # export NVM_DIR="$HOME/.nvm"
 # [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"
 type nvm > /dev/null 2>&1 && nvm use default
 
 # postgres
 export PATH=$PATH:/Applications/Postgres.app/Contents/Versions/9.3/bin
+
+# rvm
+export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
