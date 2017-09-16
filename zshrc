@@ -149,3 +149,6 @@ export PATH=$PATH:/Applications/Postgres.app/Contents/Versions/9.3/bin
 
 # rvm
 export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
+
+# home bin
+export PATH="$PATH:$HOME/bin"
