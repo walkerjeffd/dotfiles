@@ -102,18 +102,6 @@ setopt MENU_COMPLETE
 # functions
 mcd() { mkdir $1 && cd $1; }
 
-# boot2docker
-$(boot2docker shellinit 2> /dev/null)
-
-# marked 2
-function marked(){
-  if [ $1 ]; then
-    open -a "Marked 2.App" $1
-  else
-    open -a "Marked 2.App"
-  fi
-}
-
 # beeps are annoying
 setopt NO_BEEP
 
@@ -144,11 +132,5 @@ zstyle ':completion:*:warnings' format '%BNothing found%b'
 # nvm
 type node > /dev/null 2>&1 || export NVM_DIR="$HOME/.nvm" && [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh" && nvm use default > /dev/null
 
-# postgres
-export PATH=$PATH:/Applications/Postgres.app/Contents/Versions/9.3/bin
-
-# rvm
-export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
-
-# home bin
-export PATH="$PATH:$HOME/bin"
+# local
+[[ -f ~/.zshrc.local ]] && source ~/.zshrc.local

@@ -22,3 +22,6 @@ export NVM_DIR="$HOME/.nvm"
 
 # rvm
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*
+
+# added by Anaconda3 5.0.0 installer
+export PATH="/Users/jeff/anaconda3/bin:$PATH"
