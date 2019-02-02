@@ -1,6 +1,4 @@
-# echo Loading .zshenv
+# echo loading .zshenv
 
-# nvm - load in .zprofile
-# export NVM_DIR="$HOME/.nvm"
-# [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"
-# nvm use stable
+# local
+[[ -f ~/.zshenv_local ]] && source ~/.zshenv_local
