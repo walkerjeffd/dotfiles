@@ -142,8 +142,5 @@ setopt hist_ignore_space
 zstyle ':completion:*:descriptions' format '%U%B%d%b%u'
 zstyle ':completion:*:warnings' format '%BNothing found%b'
 
-# nvm
-type node > /dev/null 2>&1 || export NVM_DIR="$HOME/.nvm" && [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh" && nvm use default > /dev/null
-
 # local
 [[ -f ~/.zshrc_local ]] && source ~/.zshrc_local
