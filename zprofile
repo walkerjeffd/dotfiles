@@ -5,4 +5,4 @@ export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"
 
 # local
-[[ -f ~/.zshprofile_local ]] && source ~/.zshprofile_local
+[[ -f ~/.zprofile_local ]] && source ~/.zprofile_local
