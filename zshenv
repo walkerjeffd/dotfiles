@@ -1,4 +1,4 @@
 # echo loading .zshenv
 
 # local
-[[ -f ~/.zshenv_local ]] && source ~/.zshenv_local
+[[ -f $HOME/.zshenv_local ]] && source $HOME/.zshenv_local

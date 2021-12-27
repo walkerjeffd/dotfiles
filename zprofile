@@ -1,4 +1,4 @@
 # echo Loading .zprofile
 
 # local
-[[ -f ~/.zprofile_local ]] && source ~/.zprofile_local
+[[ -f $HOME/.zprofile_local ]] && source $HOME/.zprofile_local
