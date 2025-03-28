@@ -23,8 +23,29 @@ ZSH_THEME_GIT_PROMPT_SUFFIX="%{%f%k%b%K{${bkg}}%B%F{green}%}]"
 ZSH_THEME_GIT_PROMPT_DIRTY=" %{%F{red}%}*%{%f%k%b%}"
 ZSH_THEME_GIT_PROMPT_CLEAN=""
 
+precmd_conda_info() {
+  if [[ -n $CONDA_PREFIX ]]; then
+      if [[ $(basename $CONDA_PREFIX) == "miniconda3" ]]; then
+        # Without this, it would display conda version
+        CONDA_ENV="(base) "
+      else
+        # For all environments that aren't (base)
+        CONDA_ENV="($(basename $CONDA_PREFIX)) "
+      fi
+  # When no conda environment is active, don't show anything
+  else
+    CONDA_ENV=""
+  fi
+}
+
+# Run the previously defined function before each prompt
+precmd_functions+=( precmd_conda_info )
+
+# Allow substitutions and expansions in the prompt
+setopt prompt_subst
+
 PROMPT='%{%f%k%b%}
-%{%K{${bkg}}%B%F{green}%}%n%{%B%F{blue}%}@%{%B%F{cyan}%}%m%{%B%F{green}%} %{%b%F{yellow}%K{${bkg}}%}%~%{%B%F{green}%}$(git_prompt_info)%E%{%f%k%b%}
+%{%K{${bkg}}%B%F{green}%}%n%{%B%F{blue}%}@%{%B%F{cyan}%}%m%{%B%F{green}%} %{%b%F{yellow}%K{${bkg}}%}%~%B%F{green}%}$(git_prompt_info)%E%{%f%k%b%}%K{${bkg}}%F{blue} $CONDA_ENV%f%k
 $(_prompt_char)$ '
 #%{%K{${bkg}}%}$(_prompt_char)%{%K{${bkg}}%} $%{%f%k%b%} '
 
