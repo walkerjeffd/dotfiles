@@ -47,7 +47,3 @@ setopt prompt_subst
 PROMPT='%{%f%k%b%}
 %{%K{${bkg}}%B%F{green}%}%n%{%B%F{blue}%}@%{%B%F{cyan}%}%m%{%B%F{green}%} %{%b%F{yellow}%K{${bkg}}%}%~%B%F{green}%}$(git_prompt_info)%E%{%f%k%b%}%K{${bkg}}%F{blue} $CONDA_ENV%f%k
 $(_prompt_char)$ '
-#%{%K{${bkg}}%}$(_prompt_char)%{%K{${bkg}}%} $%{%f%k%b%} '
-
-# history line number
-#RPROMPT='!%{%B%F{cyan}%}%!%{%f%k%b%}'

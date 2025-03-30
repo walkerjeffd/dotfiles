@@ -66,12 +66,11 @@ HIST_STAMPS="yyyy-mm-dd"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git conda conda-zsh-completion sublime brew dirhistory npm common-aliases aws docker asdf)
+plugins=(git conda-zsh-completion common-aliases aws docker asdf)
 
 source $ZSH/oh-my-zsh.sh
 
 # User configuration
-
 export PATH="/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/opt/X11/bin:/usr/texbin"
 # export MANPATH="/usr/local/man:$MANPATH"
 
@@ -102,12 +101,7 @@ export PATH="/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/opt/X11/bin:/usr/texb
 
 alias serv='http-server .'
 alias scr='screen -dRR'
-
-# ----------------------------------------------------
-
-# history
-alias htoday='history | grep `date "+%Y-%m-%d"`'
-alias hhour='history | grep `date "+%Y-%m-%d %H"`'
+alias c='cursor'
 
 # choose first option in completion menu
 setopt MENU_COMPLETE
@@ -142,7 +136,8 @@ setopt hist_ignore_space
 zstyle ':completion:*:descriptions' format '%U%B%d%b%u'
 zstyle ':completion:*:warnings' format '%BNothing found%b'
 
-# local
-[[ -f ~/.zshrc_local ]] && source ~/.zshrc_local
 
 . "$HOME/.local/bin/env"
+
+# local
+[[ -f ~/.zshrc_local ]] && source ~/.zshrc_local
